@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Caladea, Source_Code_Pro, Fira_Sans, Eczar, Source_Sans_3 } from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -9,6 +9,34 @@ const geistSans = Geist({
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
+
+const caladea = Caladea({
+  weight: "400",
+  variable: "--font-caladea",
+  subsets: ["latin"],
+});
+
+const firaSans = Fira_Sans({
+  weight: "400",
+  variable: "--font-fira-sans",
+  subsets: ["latin"],
+});
+
+const sourceCodePro = Source_Code_Pro({
+  variable: "--font-source_code_pro",
+  subsets: ["latin"],
+});
+
+const eczar = Eczar({
+  variable: "--font-eczar",
+  subsets: ["latin"],
+});
+
+const sourceSans = Source_Sans_3({
+  weight: "600",
+  variable: "--font-source-sans-3",
   subsets: ["latin"],
 });
 
@@ -25,7 +53,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${sourceSans.className} antialiased h-screen w-screen`}
       >
         {children}
       </body>
