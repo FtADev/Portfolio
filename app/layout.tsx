@@ -1,44 +1,14 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Caladea, Source_Code_Pro, Fira_Sans, Eczar, Source_Sans_3 } from "next/font/google";
+import { Geist, Geist_Mono, Caladea, Source_Code_Pro, Fira_Sans, Eczar, Source_Sans_3, Quicksand } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
-const caladea = Caladea({
-  weight: "400",
-  variable: "--font-caladea",
-  subsets: ["latin"],
-});
-
-const firaSans = Fira_Sans({
-  weight: "400",
-  variable: "--font-fira-sans",
-  subsets: ["latin"],
-});
-
-const sourceCodePro = Source_Code_Pro({
-  variable: "--font-source_code_pro",
-  subsets: ["latin"],
-});
-
-const eczar = Eczar({
-  variable: "--font-eczar",
-  subsets: ["latin"],
-});
-
-const sourceSans = Source_Sans_3({
-  weight: "600",
-  variable: "--font-source-sans-3",
-  subsets: ["latin"],
-});
+// const quickSand = Quicksand({
+//   weight: ["300", "500", "600","700"],
+//   variable: "--font-quick-sand",
+//   subsets: ["latin"],
+//   display: "swap",
+// });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -53,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${sourceSans.className} antialiased h-screen w-screen`}
+        className={`antialiased h-screen w-screen font-quicksand`}
       >
         {children}
       </body>

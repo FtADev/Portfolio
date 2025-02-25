@@ -16,9 +16,17 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        quicksand: ['Quicksand','sans-serif']
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        bgPrimary: "var(--bg-primary)",
+        bgSecondary: "var(--bg-secondary)",
+        bgPink: "rgb(244 114 182 / var(--tw-text-opacity, 1))",
+        textColor: "var(--text-color)",
+        textColor2: "var(--text-color2)",
       },
     },
   },

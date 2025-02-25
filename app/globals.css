@@ -2,20 +2,77 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+/* :root {
   --background: #ffffff;
   --foreground: #171717;
-}
+} */
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+} */
 
 body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+ @font-face { 
+   font-family: "Quicksand"; 
+   src: url(@/public/Quicksand.ttf) format("truetype"); 
+ } 
+
+
+/* Pink */
+/* :root {
+  --bg-primary: #6a7ba2;
+  --bg-secondary: #ffdfde;
+} */
+
+/* Light Blue */
+/* :root {
+  --bg-primary: #7b9acc;
+  --bg-secondary: #FCF6F5;
+} */
+
+/*  Wine */
+/* :root {
+  --bg-primary: #5b2333;
+  --bg-secondary: #f7f4f3;
+} */
+
+/*  Purple */
+/* :root {
+  --bg-primary: #330344;
+  --bg-secondary: #cbb4d4;
+} */
+
+/*  Mulberry wine */
+/* :root {
+  --bg-primary: #4b2c35;
+  --bg-secondary: #f7d5dc;
+} */
+
+:root {
+  --bg-primary: #f2f4ee;
+  --bg-secondary: #FFD6E8;
+  --text-color: #b8bedd;
+  --text-color2: #f0a6ca;
+}
+
+@keyframes bounce {
+  0%, 100% {
+      transform: translateY(-10%);
+      animation-timing-function: cubic-bezier(0,0,0,0);
+  }
+  50% {
+      transform: none;
+      animation-timing-function: cubic-bezier(0,0,0,0);
+  }
+}
+.animate-bounce1 {
+  animation: bounce 5s infinite;
 }

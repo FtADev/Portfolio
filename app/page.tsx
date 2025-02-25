@@ -1,13 +1,11 @@
-import { LandingPage } from "./landing";
-import LandingPage2 from "./landing2";
-import SolarSystem from "./solar-system";
+import AboutPage from "./sections/about";
+import LandingPage from "./sections/landing";
 
 export default function Home() {
   return (
-    <div className="flex bg-white w-full h-full">
-      {/* <LandingPage /> */}
-      <LandingPage2 />
-      {/* <SolarSystem /> */}
+    <div className="flex flex-col w-full h-full bg-bgPrimary overflow-x-hidden">
+      <LandingPage />
+      <AboutPage />
     </div>
   );
 }
