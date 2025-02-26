@@ -1,18 +1,20 @@
 import Image from "next/image";
 import React from "react";
 
-
-const LandingPage = () => {
+const LandingSection = () => {
   const shapeColor = "#FFD6E8";
   return (
-    <section className="relative w-full h-full flex flex-col items-center justify-center mx-auto max-w-7xl px-4 py-4">
-      <div className="flex w-full justify-end gap-7 mt-7">
+    <section className="relative w-full h-screen flex flex-col items-center justify-between mx-auto max-w-7xl px-4 py-4 gap-8">
+      <div className="flex w-full items-center justify-end gap-7 mt-7">
         <span className="text-xl text-textColor2 font-bold">About</span>
+        <span className="text-xl text-textColor2 font-bold">Skills</span>
         <span className="text-xl text-textColor2 font-bold">Projects</span>
-        <span className="text-xl text-textColor2 font-bold">Contact</span>
+        <div className="text-xl text-white bg-bgPink rounded-2xl  px-3 py-2 font-bold">
+          Contact
+        </div>
       </div>
       <svg
-        className="absolute -top-[180px] -left-[300px]"
+        className="absolute -top-[180px] -left-[300px] z-0"
         width="500px"
         height="500px"
         viewBox="0 0 200 200"
@@ -24,14 +26,17 @@ const LandingPage = () => {
           transform="translate(100 100)"
         />
       </svg>
+      <span className="absolute top-1/4 left-1/3 text-[300px] font-sans text-bgPrimary uppercase drop-shadow-[0_1.2px_1.2px_rgba(244,114,182,0.5)] overflow-x-hidden z-0">
+        Fatemeh
+      </span>
       <div className="flex items-center justify-between w-full h-full">
-        <div className="flex flex-col">
+        <div className="flex flex-col z-10">
           <div className="text-xl text-textColor">Hello, its Me!</div>
-          <div className="text-4xl font-bold text-textColor2 mb-4">
+          <div className="text-4xl font-bold text-textColor2 mb-4 ">
             Fatemeh Akhlaghi
           </div>
           <div className="text-xl text-textColor">I'm a</div>
-          <div className="text-6xl text-bgPink font-bold">
+          <div className="text-6xl text-bgPink font-bold drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
             FullStack Developer
           </div>
         </div>
@@ -51,8 +56,8 @@ const LandingPage = () => {
           </svg>
           <Image
             className="absolute w-[500px] h-[500px] right-0"
-            src="/girl.svg"
-            alt="girl"
+            src="/landing.svg"
+            alt="landing"
             width={100}
             height={100}
           />
@@ -62,4 +67,4 @@ const LandingPage = () => {
   );
 };
 
-export default LandingPage;
+export default LandingSection;

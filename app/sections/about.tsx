@@ -1,11 +1,25 @@
 import Image from "next/image";
 import React from "react";
+import SocialComponent from "../components/social-components";
 
-const AboutPage = () => {
+const AboutSection = () => {
   const shapeColor = "#FFD6E8";
 
   return (
     <section className="relative w-full h-full flex items-center justify-center mx-auto max-w-7xl px-4 py-28 mt-20 gap-10">
+      <svg
+        className="absolute -top-[100px] -right-[300px] z-0"
+        width="500px"
+        height="500px"
+        viewBox="0 0 200 200"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          fill={shapeColor}
+          d="M57.2,-29.6C68.2,-13.8,67.3,12.3,55.8,26.1C44.3,40,22.1,41.6,1.8,40.6C-18.6,39.6,-37.3,36,-51.5,20.5C-65.7,5.1,-75.5,-22.1,-66.2,-36.8C-56.9,-51.5,-28.4,-53.8,-2.7,-52.3C23,-50.7,46.1,-45.3,57.2,-29.6Z"
+          transform="translate(100 100)"
+        />
+      </svg>
       <div className="relative w-[500px] h-[500px]">
         <svg
           className="absolute right-0"
@@ -28,33 +42,32 @@ const AboutPage = () => {
           height={100}
         />
       </div>
-      <div className="flex flex-col w-2/3 gap-8">
+      <div className="flex flex-col w-2/3 gap-8 z-10">
         <span className="text-5xl text-bgPink font-bold">About Me</span>
         <p className="text-lg text-justify font-normal">
-          Hello and Welcome to my website! I am Fatemeh Akhlaghi, and I'm a
-          seasoned Flutter developer, with over 4 years of experience in
-          application development. Also I have a background in Android
-          development (using both Java and Kotlin). Over the past 3 years, I
-          have become a big fan of Flutter and have honed my skills in this
-          framework. I have worked in various teams throughout my career,
-          including Exceptional Dev for 3 years, Erfan Salamat Health Services
-          Group, and the last one is Startrick, a Malaysian company. During my
-          time at Exceptional Dev, I had the opportunity to work on a diverse
-          range of projects including IoT and smart home projects, sport
-          reservation applications, psychology applications, and more. This
-          experience has given me a broad perspective on the industry and has
-          helped me develop a keen eye for detail. After that, I worked for
-          Erfan Salamat where I gained valuable experience working in health
-          services and hospitals. And my last experience was working remotely as
-          a Flutter Developer for Startrick in Malaysia where we were developing
-          pet shop services. My expertise lies in developing high-quality
-          applications that are user-friendly and visually appealing. I am
-          passionate about staying up-to-date with the latest technologies and
-          trends in the industry to ensure that my work is always cutting-edge.
+          I'm experienced FullStack Developer with 5+ years of expertise in
+          Frontend and Backend Technology. I have more than 1 year of experience
+          as a Backend Developer of Java in Behsazan Mellat. I am now seeking to
+          expand my knowledge in Backend Development. Language is not a problem
+          for me! I can switch easily between other languages!
         </p>
+        <div className="grid grid-cols-2 gap-4 ">
+          <SocialComponent url="akhlaghi.fatemeh@gmail.com" icon="" />
+          <SocialComponent url="linkedin.com/in/fatemeh-akhlaghi" icon="" />
+          <SocialComponent url="github.com/ftadev" icon="" />
+          <SocialComponent url="t.me/ftadev" icon="" />
+        </div>
+        <div className="flex gap-4">
+          <button className="bg-bgPink rounded-xl py-2 w-[200px] text-white font-bold">
+            See My Experiences
+          </button>
+          <button className="border-2 border-bgPink rounded-xl py-2 w-[200px] text-bgPink font-bold">
+            Download CV
+          </button>
+        </div>
       </div>
     </section>
   );
 };
 
-export default AboutPage;
+export default AboutSection;
