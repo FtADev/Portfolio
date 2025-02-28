@@ -7,7 +7,7 @@ const LandingSection = () => {
     <section className="relative w-full h-screen flex flex-col items-center justify-between mx-auto max-w-7xl px-4 py-4 gap-8">
       <div className="flex w-full items-center justify-end gap-7 mt-7">
         <span className="text-xl text-textColor2 font-bold">About</span>
-        <span className="text-xl text-textColor2 font-bold">Skills</span>
+        <span className="text-xl text-textColor2 font-bold">Services</span>
         <span className="text-xl text-textColor2 font-bold">Projects</span>
         <div className="text-xl text-white bg-bgPink rounded-2xl  px-3 py-2 font-bold">
           Contact

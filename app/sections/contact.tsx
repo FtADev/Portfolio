@@ -4,7 +4,7 @@ const ContactSection = () => {
   const shapeColor = "#FFD6E8";
 
   return (
-    <section className="relative w-full h-full flex items-center justify-center mx-auto max-w-7xl px-4 py-28 mt-20 gap-10">
+    <section className="relative w-full h-full flex items-center justify-center mx-auto max-w-7xl px-4 pt-28 mt-20 gap-10">
       <svg
         className="absolute -top-[100px] -right-[300px] z-0"
         width="600px"
