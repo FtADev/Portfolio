@@ -7,9 +7,9 @@ interface SocialProps {
 
 const SocialComponent = ({ url, icon }: SocialProps) => {
   return (
-    <div className="flex gap-2 items-center">
-      <div className="bg-bgPink w-5 h-5 rounded-full"></div>
-      <span className="text-black text-sm">{url}</span>
+    <div className="flex items-center">
+      <div className="bg-bgPink w-10 h-10 rounded-full"></div>
+      <span className="text-black text-sm"></span>
     </div>
   );
 };
