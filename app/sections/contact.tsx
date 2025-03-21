@@ -6,8 +6,6 @@ import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { ArrowRight, KeyRoundIcon, LetterText, Mail, UserRound } from "lucide-react";
-import { HiAtSymbol } from "react-icons/hi";
-import { Button } from "../components/ui/button";
 import InputField from "../components/input";
 import InputTextArea from "../components/input-area";
 import NetworkCV from "../components/network-cv";
