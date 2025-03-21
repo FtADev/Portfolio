@@ -94,6 +94,7 @@ const ProjectSection = () => {
   return (
     <section id="projects" className="relative w-full h-full flex min-h-screen items-center justify-center mx-auto max-w-7xl px-4 md:py-16 gap-10">
       <LiquidShape
+      className="hidden md:block"
         color={shapeColor}
         position="-top-[100px] -left-[300px]"
         height="600px"
@@ -122,7 +123,7 @@ const ProjectSection = () => {
             />
           ))}
         </div>
-        <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-5 max-w-5xl mx-auto w-full justify-center z-10 border">
+        <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-5 max-w-5xl mx-auto w-full justify-center z-10 px-4">
           {filterProjects.map((item, index) => (
             <ProjectCard key={index} title={item.title} link={item.link} src={item.src} description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, quaerat!"/>
           ))}

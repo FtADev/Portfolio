@@ -53,7 +53,7 @@ const Collapsable = ({
             index != 4 && "border-l-2 border-bgPink"
           }`}
         >
-          <div className="[font-size:_clamp(0.5rem,2vw,0.8rem)]">
+          <div className="[font-size:_clamp(0.5rem,2.5vw,0.8rem)]">
             {description}
           </div>
           <div className="flex flex-wrap gap-2 mt-2">
@@ -61,7 +61,7 @@ const Collapsable = ({
               return (
                 <div
                   key={index}
-                  className="flex border border-bgPink bg-white rounded-full px-2 py-1 [font-size:_clamp(0.4rem,1.5vw,0.8rem)] shadow-md"
+                  className="flex border border-bgPink bg-white rounded-full px-2 py-1 [font-size:_clamp(0.4rem,2.5vw,0.8rem)] shadow-md"
                 >
                   {skill}
                 </div>

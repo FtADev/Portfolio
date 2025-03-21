@@ -9,7 +9,7 @@ const LandingSection = () => {
 
   return (
     <section className="relative w-full h-full flex flex-col items-center min-h-screen mx-auto max-w-7xl px-4 py-4 gap-8">
-      <div className="flex w-full items-center justify-end gap-7 mt-7">
+      <div className="flex w-full items-center justify-end gap-7 mt-7 z-10">
         <Link
           href="#about"
           className="text-textColor2 font-bold [font-size:_clamp(0.5rem,3vw,1rem)]"
@@ -33,12 +33,12 @@ const LandingSection = () => {
       <span className="hidden md:block absolute top-1/4 left-1/3 text-[300px] font-sans text-white uppercase drop-shadow-[0_1.2px_1.2px_rgba(244,114,182,0.5)] overflow-x-hidden z-0">
         Fatemeh
       </span>
-      <div className="grid md:grid-cols-2 grid-cols-1 items-center justify-between w-full gap-5">
+      <div className="grid md:grid-cols-2 grid-cols-1 items-center justify-between w-full md:gap-5 gap-20">
         <div className="flex flex-col z-10 text-center md:text-start">
           <div className="text-textColor [font-size:_clamp(0.5rem,3vw,1rem)]">
             Hello, its Me!
           </div>
-          <div className="font-bold text-textColor2 mb-4 [font-size:_clamp(1rem,4vw,2.25rem)]">
+          <div className="font-bold text-textColor2 mb-4 [font-size:_clamp(1rem,5vw,2.25rem)]">
             Fatemeh Akhlaghi
           </div>
           <div className="text-textColor [font-size:_clamp(0.5rem,3vw,1rem)]">

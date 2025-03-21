@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Collapsable from "../components/collapsable";
 import ImageWithBG from "../components/image-bg";
 import LiquidShape from "../components/liquid-shape";
+import Link from "next/link";
 
 const AboutSection = () => {
   const shapeColor = "#FFD6E8";
@@ -112,9 +113,13 @@ const AboutSection = () => {
   return (
     <section
       id="about"
-      className="relative w-full h-full flex min-h-screen items-center justify-center mx-auto max-w-7xl px-4 gap-10"
+      className="relative w-full h-full flex min-h-screen items-center justify-center mx-auto max-w-7xl px-4 py-12 gap-10"
     >
-      <LiquidShape color={shapeColor} position="-top-[100px] -right-[300px]" />
+      <LiquidShape
+        className="hidden md:block"
+        color={shapeColor}
+        position="-top-[100px] -right-[300px]"
+      />
 
       <div className="flex flex-col w-full gap-8 ">
         <div className="flex md:flex-row flex-col gap-8">
@@ -124,15 +129,18 @@ const AboutSection = () => {
               imageSrc="/about.svg"
               size="md:w-[500px] md:h-[500px] w-[300px] h-[300px]"
             />
-            <button className="hidden md:block bg-bgPink rounded-xl py-2 px-5 text-white font-bold mx-auto text-lg shadow-md">
-              Download My CV
-            </button>
+            <Link
+              href="https://drive.google.com/file/d/19p_mKaXVBX-SwpUd-ZjX1_S_e3Vhe-QP/view?usp=sharing"
+              className="hidden md:block bg-bgPink rounded-xl py-2 px-5 text-white font-bold mx-auto text-lg shadow-md"
+            >
+              View My CV
+            </Link>
           </div>
           <div className="flex flex-col md:w-2/3 md:gap-8 gap-3 z-10">
             <span className="text-bgPink font-bold [font-size:_clamp(2rem,4vw,3.5rem)] z-10">
               About Me
             </span>
-            <p className="text-justify font-normal [font-size:_clamp(0.5rem,1rem,1.125rem)]">
+            <p className="text-justify font-normal [font-size:_clamp(0.5rem,3vw,1.125rem)]">
               I'm experienced FullStack Developer with 5+ years of expertise in
               Frontend and Backend Technology. I have more than 1 year of
               experience as a Backend Developer of Java. I am now seeking to
@@ -156,14 +164,15 @@ const AboutSection = () => {
             </div>
           </div>
         </div>
-        <button className="block md:hidden bg-bgPink rounded-xl py-2 px-5 text-white font-bold mx-auto shadow-md text-sm">
-          Download My CV
-        </button>
+        <Link
+          href="https://drive.google.com/file/d/19p_mKaXVBX-SwpUd-ZjX1_S_e3Vhe-QP/view?usp=sharing"
+          className="block md:hidden bg-bgPink rounded-xl py-2 px-5 text-white font-bold mx-auto shadow-md text-sm"
+        >
+          View My CV
+        </Link>
       </div>
     </section>
   );
 };
 
 export default AboutSection;
-
-

@@ -5,14 +5,15 @@ interface ShapeProps {
     position: string
     width?: string
     height?: string
+    className?: string
 }
 
-const LiquidShape = ({color, position, width = "500px", height = "500px" } : ShapeProps) => {
+const LiquidShape = ({color, position, width = "500px", height = "500px", className } : ShapeProps) => {
    
 
   return (
     <svg
-        className={`absolute ${position} z-0`}
+        className={`absolute ${position} z-0 ${className}`}
         width={width}
         height={height}
         viewBox="0 0 200 200"
