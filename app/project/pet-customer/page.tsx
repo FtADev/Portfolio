@@ -8,11 +8,11 @@ export default function ProjectPage() {
       title="Pet Customer"
       description="k\gh kh\ks hk\hfgtf hgkhj xflhgjlf  lj ldgf dhkhffk ghdkh.xkjhk kafk hkf kgskfggz\fgh/le"
       skills={[]}
-      photos={products}
+      photos={pictures}
     />
   );
 }
-export const products = [
+const pictures = [
   {
     src: "/pet-customer/1.png",
   },

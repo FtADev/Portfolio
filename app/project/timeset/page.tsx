@@ -8,11 +8,11 @@ export default function ProjectPage() {
       title="Timeset"
       description="k\gh kh\ks hk\hfgtf hgkhj xflhgjlf  lj ldgf dhkhffk ghdkh.xkjhk kafk hkf kgskfggz\fgh/le"
       skills={[]}
-      photos={products}
+      photos={pictures}
     />
   );
 }
-export const products = [
+const pictures = [
   {
     src: "/timeset/1.png",
   },
