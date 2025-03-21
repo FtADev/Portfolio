@@ -63,7 +63,7 @@ const LandingSection = () => {
       <div className="flex w-full items-center justify-end gap-7 mt-7 z-10">
         {navBarItems.map((item, index) => (
           <NavBarItems
-          key={index}
+            key={index}
             id={index}
             title={item.title}
             href={item.href}
