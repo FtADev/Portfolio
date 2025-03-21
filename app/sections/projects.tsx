@@ -92,9 +92,8 @@ const ProjectSection = () => {
   const [selectedIndex, setSelectedIndex] = useState(0);
 
   return (
-    <section id="projects" className="relative w-full h-full flex min-h-screen items-center justify-center mx-auto max-w-7xl px-4 md:py-16 gap-10">
+    <section id="projects" className="relative w-full h-full flex min-h-screen items-center justify-center mx-auto max-w-7xl px-4 py-16 gap-10">
       <LiquidShape
-      className="hidden md:block"
         color={shapeColor}
         position="-top-[100px] -left-[300px]"
         height="600px"
