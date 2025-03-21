@@ -25,6 +25,11 @@ const LandingSection = () => {
       href: "#contact",
       className: "text-white bg-bgPink rounded-2xl px-3 py-2",
     },
+    {
+      title: "",
+      href: "#",
+      className: "",
+    },
   ];
 
   const imageVarient = {
@@ -58,6 +63,7 @@ const LandingSection = () => {
       <div className="flex w-full items-center justify-end gap-7 mt-7 z-10">
         {navBarItems.map((item, index) => (
           <NavBarItems
+          key={index}
             id={index}
             title={item.title}
             href={item.href}
@@ -75,8 +81,9 @@ const LandingSection = () => {
           whileInView="visible"
           variants={titleVarient}
           viewport={{ once: true }}
+          className="z-10"
         >
-          <div className="flex flex-col z-10 text-center md:text-start">
+          <div className="flex flex-col text-center md:text-start">
             <div className="text-textColor [font-size:_clamp(0.5rem,3vw,1rem)]">
               Hello, its Me!
             </div>
@@ -97,11 +104,12 @@ const LandingSection = () => {
           whileInView="visible"
           variants={imageVarient}
           viewport={{ once: true }}
+          className="order-first md:order-last z-10"
         >
           <ImageWithBG
             color={shapeColor}
             imageSrc="/landing.svg"
-            size="md:w-[500px] md:h-[500px] w-[300px] h-[300px] order-first md:order-last"
+            size="md:w-[500px] md:h-[500px] w-[300px] h-[300px]"
           />
         </motion.div>
       </div>
