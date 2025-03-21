@@ -1,36 +1,44 @@
-import React from "react";
+"use client";
+import React, { ReactNode } from "react";
 import { Github, Linkedin, Mail, Send } from "lucide-react";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
-const NetworkCV = () => {
-  const socialNetworks = [
-    {
-      url: "mailto:akhlaghi.fatemeh@gmail.com",
-      icon: <Mail size={30}/>,
+interface NetworkProps {
+  index: number;
+  url: string;
+  icon: ReactNode;
+}
+
+const NetworkCV = ({ index, url, icon }: NetworkProps) => {
+  const varient = {
+    hidden: { opacity: 0, x: 100 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        ease: "easeOut",
+        duration: 0.75,
+        delay: 0.5 * index + 0.7,
+      },
     },
-    {
-      url: "https://linkedin.com/in/fatemeh-akhlaghi",
-      icon: <Linkedin size={30}/>,
-    },
-    {
-      url: "https://github.com/ftadev",
-      icon: <Github size={30} />,
-    },
-    {
-      url: "https://t.me/ftadev",
-      icon: <Send size={30}/>,
-    },
-  ];
+  };
 
   return (
-      <div className="flex mx-auto gap-8">
-        {socialNetworks.map((item, index) => (
-          <Link key={index} href={item.url} className="text-bgPink hover:scale-125 transition-all duration-150">
-            {item.icon}
-          </Link>
-        ))}
-      </div>
-  
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      variants={varient}
+      viewport={{ once: true }}
+      className=""
+    >
+      <Link
+        href={url}
+        className="text-bgPink hover:scale-125 transition-all duration-150"
+      >
+        {icon}
+      </Link>
+    </motion.div>
   );
 };
 

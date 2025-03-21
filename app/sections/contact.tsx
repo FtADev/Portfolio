@@ -7,9 +7,12 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import {
   ArrowRight,
+  Github,
   KeyRoundIcon,
   LetterText,
+  Linkedin,
   Mail,
+  Send,
   UserRound,
 } from "lucide-react";
 import InputField from "../components/input";
@@ -28,6 +31,25 @@ export type LoginFormData = z.infer<typeof loginSchema>;
 
 const ContactSection = () => {
   const shapeColor = "#FFD6E8";
+
+  const socialNetworks = [
+    {
+      url: "mailto:akhlaghi.fatemeh@gmail.com",
+      icon: <Mail size={30} />,
+    },
+    {
+      url: "https://linkedin.com/in/fatemeh-akhlaghi",
+      icon: <Linkedin size={30} />,
+    },
+    {
+      url: "https://github.com/ftadev",
+      icon: <Github size={30} />,
+    },
+    {
+      url: "https://t.me/ftadev",
+      icon: <Send size={30} />,
+    },
+  ];
 
   const titleVarient = {
     hidden: { opacity: 0, y: 100 },
@@ -83,7 +105,7 @@ const ContactSection = () => {
   return (
     <section
       id="contact"
-      className="relative w-full h-full grid grid-cols-1 md:grid-cols-2 min-h-screen items-center justify-center mx-auto max-w-7xl px-4 pt-28 gap-10"
+      className="relative w-full h-full min-h-screen items-center justify-center mx-auto max-w-7xl px-4 pt-28 gap-10"
     >
       <LiquidShape
         color={shapeColor}
@@ -92,24 +114,26 @@ const ContactSection = () => {
         width="600px"
       />
 
-      <div className="flex flex-col md:w-2/3 gap-8 z-10 text-center md:text-start min-w-full">
+      <div className="grid grid-rows-4 grid-cols-1 md:grid-cols-2 w-full h-full gap-4">
+        {/* Title */}
         <motion.div
           initial="hidden"
           whileInView="visible"
           variants={titleVarient}
           viewport={{ once: true }}
-          className="z-10"
+          className="row-span-1 z-10 relative"
         >
-          <span className="text-bgPink font-bold [font-size:_clamp(2rem,4vw,3.5rem)]">
+          <span className="absolute bottom-0 left-0 right-0  text-bgPink font-bold [font-size:_clamp(2rem,4vw,3.5rem)] text-center md:text-start">
             Contact Me
           </span>
         </motion.div>
+        {/* Image */}
         <motion.div
           initial="hidden"
           whileInView="visible"
-          variants={titleVarient}
+          variants={imageVarient}
           viewport={{ once: true }}
-          className="md:hidden block relative md:w-[500px] md:h-[500px] w-[300px] h-[300px] mx-auto"
+          className="row-span-3 relative md:w-[500px] md:h-[500px] w-[300px] h-[300px] mx-auto md:mt-10"
         >
           <Image
             className="absolute md:w-[500px] md:h-[500px] w-[300px] h-[300px] right-0"
@@ -119,13 +143,15 @@ const ContactSection = () => {
             height={100}
           />
         </motion.div>
+
+        {/* Form */}
         <motion.form
           initial="hidden"
           whileInView="visible"
           variants={formVarient}
           viewport={{ once: true }}
           onSubmit={handleSubmit(onSubmit)}
-          className="space-y-3 overflow-hidden items-center justify-center flex"
+          className="row-span-3 space-y-3 overflow-hidden items-center justify-center flex"
         >
           <div className="flex-1 rounded-lg px-6 pb-4">
             <div className="w-full">
@@ -173,18 +199,18 @@ const ContactSection = () => {
             </button>
           </div>
         </motion.form>
-      </div>
-      <div className="flex flex-col gap-1 z-10">
-        <div className="hidden md:block relative md:w-[500px] md:h-[500px] w-[300px] h-[300px] mx-auto">
-          <Image
-            className="absolute md:w-[500px] md:h-[500px] w-[300px] h-[300px] right-0"
-            src="/contact.svg"
-            alt="about"
-            width={100}
-            height={100}
-          />
+
+        {/* Network */}
+        <div className="row-span-1 flex mx-auto gap-8">
+          {socialNetworks.map((item, index) => (
+            <NetworkCV
+              key={index}
+              index={index}
+              url={item.url}
+              icon={item.icon}
+            />
+          ))}
         </div>
-        <NetworkCV />
       </div>
     </section>
   );
