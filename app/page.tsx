@@ -3,16 +3,14 @@ import ContactSection from "./sections/contact";
 import FooterSection from "./sections/footer";
 import LandingSection from "./sections/landing";
 import ProjectSection from "./sections/projects";
-import ServicesSection from "./sections/services";
-import SkillsSection from "./sections/skills";
 
 export default function Home() {
   return (
-    <div className="flex flex-col w-full h-full bg-bgPrimary overflow-x-hidden">
+    // <div className="flex flex-col w-full h-full overflow-x-hidden bg-white gap-8">
+    <div className="overflow-x-hidden overflow-y-auto bg-white px-3">
       <LandingSection />
       <AboutSection />
-      <ServicesSection />
-      <ProjectSection />
+      <ProjectSection/>
       <ContactSection />
       <FooterSection />
     </div>

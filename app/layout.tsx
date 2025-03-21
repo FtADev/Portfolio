@@ -23,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`antialiased h-screen w-screen font-quicksand`}
+        className={`antialiased h-screen w-screen font-quicksand overflow-x-hidden`}
       >
         {children}
       </body>

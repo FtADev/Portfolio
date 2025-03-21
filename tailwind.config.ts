@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import { clamp } from "three/src/math/MathUtils.js";
 
 const defaultTheme = require("tailwindcss/defaultTheme");
  

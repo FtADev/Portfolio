@@ -1,34 +1,146 @@
+"use client";
 import Image from "next/image";
 import React from "react";
+import LiquidShape from "../components/liquid-shape";
+import { z } from "zod";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm } from "react-hook-form";
+import { ArrowRight, KeyRoundIcon, LetterText, Mail, UserRound } from "lucide-react";
+import { HiAtSymbol } from "react-icons/hi";
+import { Button } from "../components/ui/button";
+import InputField from "../components/input";
+import InputTextArea from "../components/input-area";
+import NetworkCV from "../components/network-cv";
+
+export const loginSchema = z.object({
+  fullName: z.string().min(3, "Name is Required"),
+  email: z.string().email("Invalid email address").min(1, "Email is required"),
+  subject: z.string().min(3, "Subject is Required"),
+  description: z.string().min(3, "Description is required"),
+});
+
+export type LoginFormData = z.infer<typeof loginSchema>;
+
 const ContactSection = () => {
   const shapeColor = "#FFD6E8";
 
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<LoginFormData>({
+    resolver: zodResolver(loginSchema),
+  });
+
+  const onSubmit = async (data: LoginFormData) => {
+    try {
+    } catch (error: any) {
+      
+    }
+  };
+
   return (
-    <section className="relative w-full h-full flex items-center justify-center mx-auto max-w-7xl px-4 pt-28 mt-20 gap-10">
-      <svg
-        className="absolute -top-[100px] -right-[300px] z-0"
-        width="600px"
+    <section
+      id="contact"
+      className="relative w-full h-full grid grid-cols-1 md:grid-cols-2 min-h-screen items-center justify-center mx-auto max-w-7xl px-4 pt-28 gap-10"
+    >
+      <LiquidShape
+        color={shapeColor}
+        position="-top-[100px] -right-[300px] z-0"
         height="600px"
-        viewBox="0 0 200 200"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          fill={shapeColor}
-          d="M57.2,-29.6C68.2,-13.8,67.3,12.3,55.8,26.1C44.3,40,22.1,41.6,1.8,40.6C-18.6,39.6,-37.3,36,-51.5,20.5C-65.7,5.1,-75.5,-22.1,-66.2,-36.8C-56.9,-51.5,-28.4,-53.8,-2.7,-52.3C23,-50.7,46.1,-45.3,57.2,-29.6Z"
-          transform="translate(100 100)"
-        />
-      </svg>
-      <div className="flex flex-col w-2/3 gap-8">
-        <span className="text-5xl text-bgPink font-bold">Contact Me</span>
+        width="600px"
+      />
+
+      <div className="flex flex-col md:w-2/3 gap-8 z-10 text-center md:text-start min-w-full">
+        <span className="text-bgPink font-bold [font-size:_clamp(2rem,4vw,3.5rem)]">Contact Me</span>
+        <div className="md:hidden block relative md:w-[500px] md:h-[500px] w-[300px] h-[300px] mx-auto">
+          <Image
+            className="absolute md:w-[500px] md:h-[500px] w-[300px] h-[300px] right-0"
+            src="/contact.svg"
+            alt="about"
+            width={100}
+            height={100}
+          />
+        </div>
+        <form
+          onSubmit={handleSubmit(onSubmit)}
+          className="space-y-3 overflow-hidden items-center justify-center flex"
+        >
+          <div className="flex-1 rounded-lg px-6 pb-4">
+            <div className="w-full">
+              <div className="flex flex-col md:flex-row w-full justify-between md:gap-6">
+                <InputField
+                  id="fullName"
+                  label="Full Name"
+                  register={register}
+                  errors={
+                    errors.fullName && <span>{errors.fullName.message}</span>
+                  }
+                  icon={<UserRound size={20}/>}
+                />
+                <InputField
+                  id="email"
+                  label="Email"
+                  register={register}
+                  errors={errors.email && <span>{errors.email.message}</span>}
+                  icon={<Mail size={20}/>}
+                />
+              </div>
+              <InputField
+                id="subject"
+                label="Subject"
+                register={register}
+                errors={errors.subject && <span>{errors.subject.message}</span>}
+                icon={<LetterText size={20}/>}
+              />
+              <InputTextArea
+                id="description"
+                label="Description"
+                register={register}
+                errors={
+                  errors.description && (
+                    <span>{errors.description.message}</span>
+                  )
+                }
+              />
+            </div>
+            {/* <Button
+              className="mt-10 w-full bg-darkBlue hover:bg-lightBlue"
+              type="submit"
+            >
+              Login <ArrowRight className="ms-auto h-5 w-5 text-gray-50" />
+            </Button> */}
+             <button className="mt-8 bg-bgPink rounded-xl py-2 w-[200px] text-white font-bold mx-auto shadow-md"
+             type="submit"
+             >
+          Send 
+        </button>
+            {/* <div
+              className="flex h-8 items-end space-x-1"
+              aria-live="polite"
+              aria-atomic="true"
+            >
+              {errorMessage && (
+            <>
+              <BsExclamationCircle className="h-5 w-5 text-red-500" />
+              <p className="text-sm text-red-500">{errorMessage}</p>
+            </>
+          )}
+            </div> */}
+          </div>
+        </form>
       </div>
-      <div className="relative w-[500px] h-[500px]">
-        <Image
-          className="absolute w-[500px] h-[500px] right-0"
-          src="/contact.svg"
-          alt="about"
-          width={100}
-          height={100}
-        />
+      <div className="flex flex-col gap-1 z-10">
+        <div className="hidden md:block relative md:w-[500px] md:h-[500px] w-[300px] h-[300px] mx-auto">
+          <Image
+            className="absolute md:w-[500px] md:h-[500px] w-[300px] h-[300px] right-0"
+            src="/contact.svg"
+            alt="about"
+            width={100}
+            height={100}
+          />
+        </div>
+        <NetworkCV />
       </div>
     </section>
   );
