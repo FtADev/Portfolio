@@ -22,7 +22,7 @@ body {
 
  @font-face { 
    font-family: "Quicksand"; 
-   src: url(@/public/Quicksand.ttf) format("truetype"); 
+   src: url(../public/Quicksand.ttf) format("truetype"); 
  } 
 
 
