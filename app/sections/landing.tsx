@@ -30,7 +30,7 @@ const LandingSection = () => {
         </Link>
       </div>
       <LiquidShape color={shapeColor} position="-top-[180px] -left-[300px]" />
-      <span className="hidden md:block absolute top-1/4 left-1/3 text-[300px] font-sans text-white uppercase drop-shadow-[0_1.2px_1.2px_rgba(244,114,182,0.5)] overflow-x-hidden z-0">
+      <span className="hidden md:block absolute top-1/4  text-[300px] font-sans text-white uppercase drop-shadow-[0_1.2px_1.2px_rgba(244,114,182,0.3)] overflow-x-hidden z-0">
         Fatemeh
       </span>
       <div className="grid md:grid-cols-2 grid-cols-1 items-center justify-between w-full md:gap-5 gap-20">
