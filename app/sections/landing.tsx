@@ -72,10 +72,10 @@ const LandingSection = () => {
         ))}
       </div>
       <LiquidShape color={shapeColor} position="-top-[180px] -left-[300px]" />
-      <span className="hidden md:block absolute top-1/4  text-[300px] font-sans text-white uppercase drop-shadow-[0_1.2px_1.2px_rgba(244,114,182,0.3)] overflow-x-hidden z-0">
+      <span className="hidden lg:block absolute top-1/4  text-[300px] font-sans text-white uppercase drop-shadow-[0_1.2px_1.2px_rgba(244,114,182,0.3)] overflow-x-hidden z-0">
         Fatemeh
       </span>
-      <div className="grid md:grid-cols-2 grid-cols-1 items-center justify-between w-full md:gap-5 gap-20">
+      <div className="grid lg:grid-cols-2 grid-cols-1 items-center justify-between w-full lg:gap-5 gap-20">
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -83,7 +83,7 @@ const LandingSection = () => {
           viewport={{ once: true }}
           className="z-10"
         >
-          <div className="flex flex-col text-center md:text-start">
+          <div className="flex flex-col text-center lg:text-start">
             <div className="text-textColor [font-size:_clamp(0.5rem,3vw,1rem)]">
               Hello, its Me!
             </div>
@@ -104,12 +104,12 @@ const LandingSection = () => {
           whileInView="visible"
           variants={imageVarient}
           viewport={{ once: true }}
-          className="order-first md:order-last z-10"
+          className="order-first lg:order-last z-10"
         >
           <ImageWithBG
             color={shapeColor}
             imageSrc="/landing.svg"
-            size="md:w-[500px] md:h-[500px] w-[300px] h-[300px]"
+            size="lg:w-[500px] lg:h-[500px] w-[300px] h-[300px]"
           />
         </motion.div>
       </div>

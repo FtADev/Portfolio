@@ -114,7 +114,7 @@ const ContactSection = () => {
         width="600px"
       />
 
-      <div className="grid grid-rows-4 grid-cols-1 md:grid-cols-2 w-full h-full gap-4">
+      <div className="grid grid-rows-4 grid-cols-1 lg:grid-cols-2 w-full h-full gap-4">
         {/* Title */}
         <motion.div
           initial="hidden"
@@ -123,7 +123,7 @@ const ContactSection = () => {
           viewport={{ once: true }}
           className="row-span-1 z-10 relative"
         >
-          <span className="absolute bottom-0 left-0 right-0  text-bgPink font-bold [font-size:_clamp(2rem,4vw,3.5rem)] text-center md:text-start">
+          <span className="absolute bottom-0 left-0 right-0  text-bgPink font-bold [font-size:_clamp(2rem,4vw,3.5rem)] text-center lg:text-start">
             Contact Me
           </span>
         </motion.div>
@@ -133,10 +133,10 @@ const ContactSection = () => {
           whileInView="visible"
           variants={imageVarient}
           viewport={{ once: true }}
-          className="row-span-3 relative md:w-[500px] md:h-[500px] w-[300px] h-[300px] mx-auto md:mt-10"
+          className="row-span-3 relative lg:w-[500px] lg:h-[500px] w-[300px] h-[300px] mx-auto lg:mt-10"
         >
           <Image
-            className="absolute md:w-[500px] md:h-[500px] w-[300px] h-[300px] right-0"
+            className="absolute lg:w-[500px] lg:h-[500px] w-[300px] h-[300px] right-0"
             src="/contact.svg"
             alt="about"
             width={100}
@@ -153,8 +153,9 @@ const ContactSection = () => {
           onSubmit={handleSubmit(onSubmit)}
           className="row-span-3 space-y-3 overflow-hidden items-center justify-center flex"
         >
-          <div className="flex flex-col w-full rounded-lg px-6 pb-4 items-center md:items-start justify-center">
-              <div className="flex flex-col md:flex-row w-full justify-between md:gap-6">
+          <div className="flex flex-col w-full rounded-lg px-6 pb-4 items-center lg:items-start justify-center">
+              <div className="flex flex-col lg:flex-row w-full justify-between 
+              lg:gap-6">
                 <InputField
                   id="fullName"
                   label="Full Name"

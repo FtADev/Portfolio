@@ -36,13 +36,13 @@ const ProjectSection = () => {
     },
     {
       title: "Financial Capability",
-      src: "/tamakon.png",
+      src: "/tamakon3.png",
       type: 1,
       link: "https://bankmellat.ir/deposit_account.aspx",
     },
     {
       title: "Namacheque Service",
-      src: "/namacheque.jpg",
+      src: "/cheque.jpg",
       type: 1,
       link: "https://bankmellat.ir/nama_check.aspx",
     },
@@ -123,7 +123,7 @@ const ProjectSection = () => {
             My Projects
           </span>
         </motion.div>
-        <div className="flex md:gap-7 gap-1 mt-5">
+        <div className="flex lg:gap-7 gap-1 mt-5">
           {projectTypes.map((type, index) => (
             <SelectedButton
               key={index}

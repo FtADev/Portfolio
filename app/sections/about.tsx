@@ -182,22 +182,22 @@ const AboutSection = () => {
     >
       <LiquidShape
         color={shapeColor}
-        position="-top-[300px] md:-top-[100px] -right-[300px]"
+        position="-top-[300px] lg:-top-[100px] -right-[300px]"
       />
 
-      <div className="grid grid-rows-4 grid-cols-1 md:grid-cols-2 w-full h-full gap-4">
+      <div className="grid grid-rows-4 grid-cols-1 lg:grid-cols-2 w-full h-full gap-4">
         {/* Image */}
         <motion.div
           initial="hidden"
           whileInView="visible"
           variants={imageVarient}
           viewport={{ once: true }}
-          className="row-span-3 order-2 md:order-1 md:pt-8"
+          className="row-span-3 order-2 lg:order-1 lg:pt-8"
         >
           <ImageWithBG
             color={shapeColor}
             imageSrc="/about.svg"
-            size="md:w-[500px] md:h-[500px] w-[300px] h-[300px]"
+            size="lg:w-[500px] lg:h-[500px] w-[300px] h-[300px]"
           />
         </motion.div>
 
@@ -207,7 +207,7 @@ const AboutSection = () => {
           whileInView="visible"
           variants={titleVarient}
           viewport={{ once: true }}
-          className="relative row-span-1 order-1 md:order-2 md:text-start z-10"
+          className="relative row-span-1 order-1 lg:order-2 lg:text-start z-10"
         >
           <span className="absolute bottom-0 right-0 left-0 text-bgPink font-bold [font-size:_clamp(2rem,4vw,3.5rem)]">
             About Me
@@ -216,7 +216,7 @@ const AboutSection = () => {
 
         {/* Description */}
         <div className="row-span-3 order-3 z-10">
-          <div className="flex flex-col md:gap-8 gap-3 ">
+          <div className="flex flex-col lg:gap-8 gap-3 ">
             <motion.p
               initial="hidden"
               whileInView="visible"
@@ -264,7 +264,7 @@ const AboutSection = () => {
         >
           <Link
             href="https://drive.google.com/file/d/19p_mKaXVBX-SwpUd-ZjX1_S_e3Vhe-QP/view?usp=sharing"
-            className=" bg-bgPink rounded-xl py-2 px-5 text-white font-bold mx-auto text-lg shadow-md"
+            className=" bg-bgPink rounded-xl py-2 px-5 text-white font-bold mx-auto text-lg shadow-lg"
           >
             View My CV
           </Link>
