@@ -60,7 +60,7 @@ const ProjectSection = () => {
     },
     {
       title: "Ecommerce",
-      src: "/blog-img4.jpg",
+      src: "/ecommerce.png",
       type: 2,
       link: "",
     },
