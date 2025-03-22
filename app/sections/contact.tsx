@@ -153,8 +153,7 @@ const ContactSection = () => {
           onSubmit={handleSubmit(onSubmit)}
           className="row-span-3 space-y-3 overflow-hidden items-center justify-center flex"
         >
-          <div className="flex-1 rounded-lg px-6 pb-4">
-            <div className="w-full">
+          <div className="flex flex-col w-full rounded-lg px-6 pb-4 items-center md:items-start justify-center">
               <div className="flex flex-col md:flex-row w-full justify-between md:gap-6">
                 <InputField
                   id="fullName"
@@ -190,9 +189,8 @@ const ContactSection = () => {
                   )
                 }
               />
-            </div>
             <button
-              className="mt-8 bg-bgPink rounded-xl py-2 w-[200px] text-white font-bold mx-auto shadow-md"
+              className="mt-8 bg-bgPink rounded-xl py-2 w-[200px] text-white font-bold shadow-md"
               type="submit"
             >
               Send

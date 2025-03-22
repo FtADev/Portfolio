@@ -9,7 +9,7 @@ interface InputProps {
 
 const InputTextArea = ({ label, id, register, errors }: InputProps) => {
   return (
-    <div className="mt-4 text-start">
+    <div className="mt-4 text-start w-full">
       <label
         className="mb-3 mt-5 block text-sm font-semibold text-gray-900"
         htmlFor={id}
