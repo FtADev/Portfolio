@@ -62,7 +62,7 @@ const ProjectSection = () => {
       title: "Ecommerce",
       src: "/ecommerce.png",
       type: 2,
-      link: "",
+      link: "https://ecommerce-db-two.vercel.app/",
     },
     {
       title: "Payatam",
