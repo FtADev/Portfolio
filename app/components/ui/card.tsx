@@ -86,16 +86,19 @@ export const DirectionAwareHover = ({
               ease: "easeOut",
             }}
           >
+            <div className="p-5 h-full w-full flex items-center justify-center">
+
             <Image
               alt="image"
               className={cn(
-                "h-full w-full object-cover scale-[1.15]",
+                "h-[200px] w-[200px] scale-[1.15]",
                 imageClassName
               )}
               width="1000"
               height="1000"
               src={imageUrl}
-            />
+              />
+              </div>
           </motion.div>
           <motion.div
             variants={textVariants}
