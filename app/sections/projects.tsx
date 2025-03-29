@@ -7,6 +7,7 @@ import LiquidShape from "../components/liquid-shape";
 import SelectedButton from "../components/selected-button";
 import Link from "next/link";
 import ProjectCard from "../components/project-card";
+import { motion } from "framer-motion";
 
 const ProjectSection = () => {
   const shapeColor = "#FFD6E8";
@@ -29,65 +30,80 @@ const ProjectSection = () => {
   const projects = [
     {
       title: "Bill Services",
-      src: "/bill.svg",
+      src: "/bill.png",
       type: 1,
       link: "https://bankmellat.ir/electronic_payment_of_bill.aspx",
     },
     {
       title: "Financial Capability",
-      src: "/tamakon.svg",
+      src: "/tamakon3.png",
       type: 1,
       link: "https://bankmellat.ir/deposit_account.aspx",
     },
     {
       title: "Namacheque Service",
-      src: "/credit.svg",
+      src: "/cheque.jpg",
       type: 1,
       link: "https://bankmellat.ir/nama_check.aspx",
     },
     {
       title: "Financial Inquiry",
-      src: "/document.svg",
+      src: "/tamakon2.png",
       type: 2,
       link: "",
     },
     {
       title: "Coffee Shop",
-      src: "/coffee.svg",
+      src: "/blog-img3.jpg",
       type: 2,
       link: "",
     },
     {
       title: "Ecommerce",
-      src: "/ecommerce.svg",
+      src: "/ecommerce.png",
       type: 2,
-      link: "",
+      link: "https://ecommerce-db-two.vercel.app/",
     },
     {
       title: "Payatam",
-      src: "/team.svg",
+      src: "/payatam.png",
       type: 3,
       link: "/project/payatam",
     },
     {
       title: "Timeset",
-      src: "/sport.svg",
+      src: "/timeset.png",
       type: 3,
       link: "/project/timeset",
     },
     {
       title: "Pet Customer",
-      src: "/pet.svg",
+      src: "/pet-customer.png",
       type: 3,
       link: "/project/pet-customer",
     },
   ];
 
+  const titleVarient = {
+    hidden: { opacity: 0, y: 100 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        ease: "easeOut",
+        duration: 1,
+      },
+    },
+  };
+
   const [filterProjects, setProjects] = useState(projects);
   const [selectedIndex, setSelectedIndex] = useState(0);
 
   return (
-    <section id="projects" className="relative w-full h-full flex min-h-screen items-center justify-center mx-auto max-w-7xl px-4 py-28 gap-10">
+    <section
+      id="projects"
+      className="relative w-full h-full flex min-h-screen items-center justify-center mx-auto max-w-7xl px-4 py-16 gap-10"
+    >
       <LiquidShape
         color={shapeColor}
         position="-top-[100px] -left-[300px]"
@@ -96,8 +112,18 @@ const ProjectSection = () => {
       />
 
       <div className="flex flex-col w-full gap-8 justify-center items-center z-10">
-        <span className="text-bgPink font-bold [font-size:_clamp(2rem,4vw,3.5rem)]">My Projects</span>
-        <div className="flex md:gap-7 gap-1 mt-5">
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          variants={titleVarient}
+          viewport={{ once: true }}
+          className="z-10"
+        >
+          <span className="text-bgPink font-bold [font-size:_clamp(2rem,4vw,3.5rem)]">
+            My Projects
+          </span>
+        </motion.div>
+        <div className="flex lg:gap-7 gap-1 mt-5">
           {projectTypes.map((type, index) => (
             <SelectedButton
               key={index}
@@ -117,9 +143,16 @@ const ProjectSection = () => {
             />
           ))}
         </div>
-        <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-5 max-w-5xl mx-auto md:px-8 w-full justify-center z-10">
+        <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-5 max-w-5xl mx-auto w-full justify-center z-10 px-4">
           {filterProjects.map((item, index) => (
-            <ProjectCard key={index} title={item.title} link={item.link} src={item.src} description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, quaerat!"/>
+            <ProjectCard
+              key={index}
+              index={index}
+              title={item.title}
+              link={item.link}
+              src={item.src}
+              description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, quaerat!"
+            />
           ))}
         </div>
       </div>
