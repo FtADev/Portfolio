@@ -32,19 +32,19 @@ const ProjectSection = () => {
       title: "Bill Services",
       src: "/bill.svg",
       type: 1,
-      link: "https://bankmellat.ir/electronic_payment_of_bill.aspx",
+      link: "https://bastam.bankmellat.ir/bastam/bill_service",
     },
     {
       title: "Financial Capability",
       src: "/tamakon.svg",
       type: 1,
-      link: "https://bankmellat.ir/deposit_account.aspx",
+      link: "https://pishkhan.bankmellat.ir/pishkhan/financial_certificate_service",
     },
     {
       title: "Namacheque Service",
       src: "/cheque.svg",
       type: 1,
-      link: "https://bankmellat.ir/nama_check.aspx",
+      link: "https://bankmellat.ir/fa-IR/commercial.personal/5349/page/%D9%86%D9%85%D8%A7-%DA%86%DA%A9",
     },
     {
       title: "Financial Inquiry",
@@ -56,7 +56,7 @@ const ProjectSection = () => {
       title: "Coffee Shop",
       src: "/coffee.svg",
       type: 2,
-      link: "",
+      link: "https://coffee-shop-xi-beryl.vercel.app/",
     },
     {
       title: "Ecommerce",
