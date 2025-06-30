@@ -6,7 +6,7 @@ export default function ProjectPage() {
   return (
     <ProjectInfo
       title="Pet Customer"
-      description="k\gh kh\ks hk\hfgtf hgkhj xflhgjlf  lj ldgf dhkhffk ghdkh.xkjhk kafk hkf kgskfggz\fgh/le"
+      description="An application for pet owners that allows them to access pet shops services such as grooming and reserving a room for their pets.\n The application also includes a feature where each pet has its own profile, and pet owners can manage a list of their pets and submit requests for each one whenever they want. Shop owners can answer these requests through the Shop Website."
       skills={[]}
       photos={pictures}
     />
