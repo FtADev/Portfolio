@@ -1,11 +1,7 @@
 "use client";
-import Image from "next/image";
 import React, { useState } from "react";
-import { FocusCards } from "../components/ui/focus-card";
-import { DirectionAwareHover } from "../components/ui/card";
 import LiquidShape from "../components/liquid-shape";
 import SelectedButton from "../components/selected-button";
-import Link from "next/link";
 import ProjectCard from "../components/project-card";
 import { motion } from "framer-motion";
 
@@ -33,54 +29,63 @@ const ProjectSection = () => {
       src: "/bill.svg",
       type: 1,
       link: "https://bastam.bankmellat.ir/bastam/bill_service",
+      description: "All Services for paying bills"
     },
     {
       title: "Financial Capability",
       src: "/tamakon.svg",
       type: 1,
       link: "https://pishkhan.bankmellat.ir/pishkhan/financial_certificate_service",
+      description: "The Service for requesting financial capability certificate"
     },
     {
       title: "Namacheque Service",
       src: "/cheque.svg",
       type: 1,
       link: "https://bankmellat.ir/fa-IR/commercial.personal/5349/page/%D9%86%D9%85%D8%A7-%DA%86%DA%A9",
+      description: "An API for cheques registration"
     },
     {
       title: "Financial Inquiry",
       src: "/document.svg",
       type: 2,
       link: "",
+      description: "The Service for receiving financial capability certificate. (It has not published yet)"
     },
     {
       title: "Coffee Shop",
       src: "/coffee.svg",
       type: 2,
       link: "https://coffee-shop-xi-beryl.vercel.app/",
+      description: "Demo website for coffee shop"
     },
     {
       title: "Ecommerce",
       src: "/ecommerce.svg",
       type: 2,
       link: "https://ecommerce-db-two.vercel.app/",
+      description: "Demo website for shopping, with admin dashboard"
     },
     {
       title: "Payatam",
       src: "/team.svg",
       type: 3,
       link: "/project/payatam",
+      description: "Finding partners for various activities such as sports, education, or renting office."
     },
     {
       title: "Timeset",
       src: "/sport.svg",
       type: 3,
       link: "/project/timeset",
+      description: "A sports reservation application in collaboration with Tehran Municipality."
     },
     {
       title: "Pet Customer",
       src: "/pet.svg",
       type: 3,
       link: "/project/pet-customer",
+      description: "Access pet shops services such as grooming or reserving a room for pets."
     },
   ];
 
@@ -151,7 +156,7 @@ const ProjectSection = () => {
               title={item.title}
               link={item.link}
               src={item.src}
-              description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, quaerat!"
+              description={item.description}
             />
           ))}
         </div>
