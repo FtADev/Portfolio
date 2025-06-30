@@ -6,7 +6,7 @@ export default function ProjectPage() {
   return (
     <ProjectInfo
       title="Timeset"
-      description="k\gh kh\ks hk\hfgtf hgkhj xflhgjlf  lj ldgf dhkhffk ghdkh.xkjhk kafk hkf kgskfggz\fgh/le"
+      description="A sports reservation application in collaboration with Tehran Municipality. This application allows users to reserve sports facilities at a complex and purchase tickets online, making it more convenient for them to access the facilities they need."
       skills={[]}
       photos={pictures}
     />
