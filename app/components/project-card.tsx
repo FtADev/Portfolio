@@ -39,7 +39,7 @@ const ProjectCard = ({
       variants={varient}
       viewport={{ once: true }}
     >
-      <Link href={link} className="">
+      <Link href={link} className="" target="_blank">
         <DirectionAwareHover imageUrl={src}>
           <p className="font-bold text-xl">{title}</p>
           <p className="font-normal text-sm">{description}</p>
