@@ -27,25 +27,25 @@ const ProjectCard = ({
       transition: {
         ease: "easeOut",
         duration: 0.75,
-        delay: 0.5 * index + 2.5,
+        delay: 0.1 * index + 2.5,
       },
     },
   };
 
   return (
-    <motion.div
-      initial="hidden"
-      whileInView="visible"
-      variants={varient}
-      viewport={{ once: true }}
-    >
+    // <motion.div
+    //   initial="hidden"
+    //   whileInView="visible"
+    //   variants={varient}
+    //   viewport={{ once: true }}
+    // >
       <Link href={link} className="" target="_blank">
         <DirectionAwareHover imageUrl={src}>
           <p className="font-bold text-xl">{title}</p>
           <p className="font-normal text-sm">{description}</p>
         </DirectionAwareHover>
       </Link>
-    </motion.div>
+    // {/* </motion.div> */}
   );
 };
 
