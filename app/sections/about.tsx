@@ -263,6 +263,7 @@ const AboutSection = () => {
           className="row-span-1 order-4 mt-4"
         >
           <Link
+            target="_blank"
             href="https://drive.google.com/file/d/19p_mKaXVBX-SwpUd-ZjX1_S_e3Vhe-QP/view?usp=sharing"
             className=" bg-bgPink rounded-xl py-2 px-5 text-white font-bold mx-auto text-lg shadow-lg"
           >
