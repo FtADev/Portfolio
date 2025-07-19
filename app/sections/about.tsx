@@ -21,7 +21,7 @@ const AboutSection = () => {
       role: "Backend Developer",
       date: "2024-Present",
       description:
-        "Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.",
+        "Behsazan Mellat Company established in 1998 as a closed company to Mellat bank to provide Banking software for Mellat bank.",
       skills: [
         "Java",
         "Spring Boot",
@@ -42,7 +42,7 @@ const AboutSection = () => {
       role: "Frontend Developer",
       date: "2024-Present",
       description:
-        "Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.",
+        "Behsazan Mellat Company established in 1998 as a closed company to Mellat bank to provide Banking software for Mellat bank.",
       skills: [
         "TypeScript",
         "Nextjs",
@@ -61,7 +61,7 @@ const AboutSection = () => {
       role: "Flutter Developer",
       date: "2022-2023",
       description:
-        "Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.",
+        " Startrick started out in year 2018 as a professional mobile application development company that strive to provide a variety of life-changing services which a big concept of ‘Localization’.",
       skills: [
         "Flutter",
         "Flutter Web",
@@ -79,7 +79,7 @@ const AboutSection = () => {
       role: "Flutter Developer",
       date: "2020-2021",
       description:
-        "Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.",
+        "Erfan Salamat Medical Services Group began its activities in 2018, benefiting from two decades of experience in Erfan Saadat Abad and Erfan Niayesh Hospitals, with the aim of developing a new approach in providing medical and care services in hospitals and homes.",
       skills: [
         "Flutter",
         "Flutter Web",
