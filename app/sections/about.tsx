@@ -97,7 +97,7 @@ const AboutSection = () => {
       role: "Software Developer",
       date: "2017-2020",
       description:
-        "Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.",
+        "Exceptional Dev Team is a team of computer students at IAU-STB University. We worked on diverse range of projects",
       skills: [
         "Android Development",
         "Flutter",
