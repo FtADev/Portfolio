@@ -42,18 +42,19 @@ const Collapsable = ({
         </div>
       </button>
 
-      <motion.div
+      {/* <motion.div
         initial={{ height: 0, opacity: 0 }}
         animate={
           index == selectedIndex
             ? { height: "auto", opacity: 1 }
             : { height: 0, opacity: 0 }
         }
-        transition={{ duration: 0.3, ease: "easeInOut" }}
+        transition={{ duration: 0.5, ease: "easeInOut" }}
         className=""
-      >
+      > */}
         <div
-          className={`overflow-hidden transition-all duration-300 ease-in-out md:mx-8 mx-3
+          // className={`overflow-hidden transition-all duration-300 ease-in-out md:mx-8 mx-3
+          className={`overflow-hidden md:mx-8 mx-3
           ${index == selectedIndex ? "max-h-screen" : "max-h-0"}`}
         >
           <div
@@ -78,7 +79,7 @@ const Collapsable = ({
             </div>
           </div>
         </div>
-      </motion.div>
+      {/* </motion.div> */}
     </>
   );
 };
