@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import Link from "next/link";
+import { Link } from "react-scroll";
 
 interface NavBarItemsProps {
   id: number;
@@ -32,8 +32,9 @@ const NavBarItems = ({ id, title, href, className }: NavBarItemsProps) => {
       viewport={{ once: true }}
     >
       <Link
-        href={href}
-        className={`text-textColor2 font-bold [font-size:_clamp(0.5rem,3vw,1rem)] ${className}`}
+        to={href}
+        smooth={true}
+        className={`text-textColor2 font-bold [font-size:_clamp(0.5rem,3vw,1rem)] cursor-pointer ${className}`}
       >
         {title}
       </Link>
