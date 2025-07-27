@@ -12,24 +12,24 @@ const LandingSection = () => {
   const navBarItems = [
     {
       title: "About",
-      href: "#about",
+      href: "about",
       className: "",
     },
     {
       title: "Projects",
-      href: "#projects",
+      href: "projects",
       className: "",
     },
     {
       title: "Contact",
-      href: "#contact",
+      href: "contact",
       className: "text-white bg-bgPink rounded-2xl px-3 py-2",
     },
-    {
-      title: "",
-      href: "#",
-      className: "",
-    },
+    // {
+    //   title: "",
+    //   href: "#",
+    //   className: "",
+    // },
   ];
 
   const imageVarient = {
