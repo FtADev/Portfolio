@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
+import { Variants, Easing } from "framer-motion";
 
 interface SelectedButtonProps {
   index: number;
@@ -17,13 +18,13 @@ const SelectedButton = ({
   index,
   selectedIndex,
 }: SelectedButtonProps) => {
-  const varient = {
+  const varient: Variants = {
     hidden: { opacity: 0, x: 100 },
     visible: {
       opacity: 1,
       x: 0,
       transition: {
-        ease: "easeOut",
+        ease: [0.25, 0.1, 0.25, 1],
         duration: 0.75,
         delay: 0.5 * index + 0.7,
       },
