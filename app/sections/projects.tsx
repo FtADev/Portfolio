@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import LiquidShape from "../components/liquid-shape";
 import SelectedButton from "../components/selected-button";
 import ProjectCard from "../components/project-card";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 
 const ProjectSection = () => {
   const shapeColor = "#FFD6E8";
@@ -94,25 +94,25 @@ const ProjectSection = () => {
     },
   ];
 
-  const titleVarient = {
+  const titleVarient: Variants = {
     hidden: { opacity: 0, y: 100 },
     visible: {
       opacity: 1,
       y: 0,
       transition: {
-        ease: "easeOut",
+        ease:  [0.25, 0.1, 0.25, 1],
         duration: 1,
       },
     },
   };
 
-  const projectsVarient = {
+  const projectsVarient: Variants = {
     hidden: { opacity: 0, y: 100 },
     visible: {
       opacity: 1,
       y: 0,
       transition: {
-        ease: "easeOut",
+        ease:  [0.25, 0.1, 0.25, 1],
         duration: 0.75,
         delay: 1,
       },
