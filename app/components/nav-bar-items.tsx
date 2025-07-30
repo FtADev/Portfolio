@@ -2,6 +2,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-scroll";
+import { Variants, Easing } from "framer-motion";
 
 interface NavBarItemsProps {
   id: number;
@@ -11,13 +12,13 @@ interface NavBarItemsProps {
 }
 
 const NavBarItems = ({ id, title, href, className }: NavBarItemsProps) => {
-  const varient = {
+  const varient: Variants = {
     hidden: { opacity: 0, x: 100 },
     visible: {
       opacity: 1,
       x: 0,
       transition: {
-        ease: "easeOut",
+        ease: [0.25, 0.1, 0.25, 1],
         duration: 0.75,
         delay: 0.5 * id,
       },
