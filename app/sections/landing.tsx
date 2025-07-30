@@ -25,11 +25,11 @@ const LandingSection = () => {
       href: "contact",
       className: "text-white bg-bgPink rounded-2xl px-3 py-2",
     },
-    // {
-    //   title: "",
-    //   href: "#",
-    //   className: "",
-    // },
+    {
+       title: "",
+       href: "#",
+       className: "",
+    },
   ];
 
   const imageVarient: Variants = {
