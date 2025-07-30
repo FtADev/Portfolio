@@ -4,7 +4,7 @@ import Collapsable from "../components/collapsable";
 import ImageWithBG from "../components/image-bg";
 import LiquidShape from "../components/liquid-shape";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 
 const AboutSection = () => {
   const shapeColor = "#FFD6E8";
@@ -111,64 +111,64 @@ const AboutSection = () => {
     },
   ];
 
-  const titleVarient = {
+  const titleVarient: Variants = {
     hidden: { opacity: 0, y: 100 },
     visible: {
       opacity: 1,
       y: 0,
       transition: {
-        ease: "easeOut",
+        ease: [0.25, 0.1, 0.25, 1],
         duration: 1,
       },
     },
   };
 
-  const imageVarient = {
+  const imageVarient: Variants = {
     hidden: { opacity: 0, y: 100 },
     visible: {
       opacity: 1,
       y: 0,
       transition: {
-        ease: "easeOut",
-        duration: 1,
-        delay: 0.5,
-      },
-    },
-  };
-
-  const descVarient = {
-    hidden: { opacity: 0, y: 100 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        ease: "easeOut",
+        ease: [0.25, 0.1, 0.25, 1],
         duration: 1,
         delay: 0.5,
       },
     },
   };
 
-  const expVarient = {
+  const descVarient: Variants = {
     hidden: { opacity: 0, y: 100 },
     visible: {
       opacity: 1,
       y: 0,
       transition: {
-        ease: "easeOut",
+        ease: [0.25, 0.1, 0.25, 1],
+        duration: 1,
+        delay: 0.5,
+      },
+    },
+  };
+
+  const expVarient: Variants = {
+    hidden: { opacity: 0, y: 100 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        ease: [0.25, 0.1, 0.25, 1],
         duration: 1,
         delay: 1,
       },
     },
   };
 
-  const cvVarient = {
+  const cvVarient: Variants = {
     hidden: { opacity: 0, y: 100 },
     visible: {
       opacity: 1,
       y: 0,
       transition: {
-        ease: "easeOut",
+        ease: [0.25, 0.1, 0.25, 1],
         duration: 1,
         delay: 1,
       },
