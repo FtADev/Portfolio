@@ -4,7 +4,7 @@ import React from "react";
 import ImageWithBG from "../components/image-bg";
 import LiquidShape from "../components/liquid-shape";
 import NavBarItems from "../components/nav-bar-items";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 
 const LandingSection = () => {
   const shapeColor = "#FFD6E8";
@@ -32,26 +32,26 @@ const LandingSection = () => {
     // },
   ];
 
-  const imageVarient = {
+  const imageVarient: Variants = {
     hidden: { opacity: 0, y: 100 },
     visible: {
       opacity: 1,
       y: 0,
       transition: {
-        ease: "easeOut",
+        ease:  [0.25, 0.1, 0.25, 1],
         duration: 1,
         delay: 0.5,
       },
     },
   };
 
-  const titleVarient = {
+  const titleVarient: Variants = {
     hidden: { opacity: 0, x: -100 },
     visible: {
       opacity: 1,
       x: 0,
       transition: {
-        ease: "easeOut",
+        ease:  [0.25, 0.1, 0.25, 1],
         duration: 1,
         delay: 0.5,
       },
