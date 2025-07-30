@@ -18,7 +18,7 @@ import {
 import InputField from "../components/input";
 import InputTextArea from "../components/input-area";
 import NetworkCV from "../components/network-cv";
-import { delay, motion } from "framer-motion";
+import { delay, motion, Variants } from "framer-motion";
 
 export const loginSchema = z.object({
   fullName: z.string().min(3, "Name is Required"),
@@ -51,38 +51,38 @@ const ContactSection = () => {
     },
   ];
 
-  const titleVarient = {
+  const titleVarient: Variants = {
     hidden: { opacity: 0, y: 100 },
     visible: {
       opacity: 1,
       y: 0,
       transition: {
-        ease: "easeOut",
+        ease:  [0.25, 0.1, 0.25, 1],
         duration: 1,
       },
     },
   };
 
-  const imageVarient = {
+  const imageVarient: Variants = {
     hidden: { opacity: 0, y: 100 },
     visible: {
       opacity: 1,
       y: 0,
       transition: {
-        ease: "easeOut",
+        ease:  [0.25, 0.1, 0.25, 1],
         duration: 1,
         delay: 0.5,
       },
     },
   };
 
-  const formVarient = {
+  const formVarient: Variants = {
     hidden: { opacity: 0, y: 100 },
     visible: {
       opacity: 1,
       y: 0,
       transition: {
-        ease: "easeOut",
+        ease:  [0.25, 0.1, 0.25, 1],
         duration: 1,
         delay: 1,
       },
