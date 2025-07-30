@@ -7,7 +7,7 @@ import ProjectSection from "./sections/projects";
 export default function Home() {
   return (
     // <div className="flex flex-col w-full h-full overflow-x-hidden bg-white gap-8">
-    <div className="bg-white">
+    <div className="bg-white overflow-x-hidden">
       <LandingSection />
       <AboutSection />
       <ProjectSection/>
