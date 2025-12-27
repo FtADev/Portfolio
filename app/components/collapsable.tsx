@@ -1,12 +1,11 @@
 import React from "react";
-import { motion } from "framer-motion";
 
 interface CollapsableProps {
   title: string;
   role: string;
   date: string;
   description: string;
-  url?: string;
+  // url?: string;
   index: number;
   selectedIndex: number;
   skills: string[];
