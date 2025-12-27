@@ -224,7 +224,7 @@ const AboutSection = () => {
               viewport={{ once: true }}
               className="text-justify font-normal [font-size:_clamp(0.5rem,3vw,1.125rem)]"
             >
-              I'm experienced FullStack Developer with 5+ years of expertise in
+              I&apos;m experienced FullStack Developer with 5+ years of expertise in
               Frontend and Backend Technology. I have more than 1 year of
               experience as a Backend Developer of Java. I am now seeking to
               expand my knowledge in Backend Development. Language is not a
