@@ -17,7 +17,7 @@ const Collapsable = ({
   role,
   date,
   description,
-  url,
+  // url,
   index,
   selectedIndex,
   skills,
